@@ -1,0 +1,5 @@
+node_modules
+dist
+
+#编辑器目录和文件
+.vscode/*

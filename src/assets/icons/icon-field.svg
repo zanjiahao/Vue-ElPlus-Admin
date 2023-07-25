@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <g id="3" stroke="none" stroke-width="1" fill-rule="evenodd">
+        <g id="编组" transform="translate(0.500000, 4.000000)">
+            <circle id="椭圆形" cx="10" cy="4.5" r="4.7"></circle>
+            <circle id="椭圆形内圆" stroke-width="0.6" stroke="" fill="#fff" cx="9" cy="4.5" r="4"></circle>
+            <circle id="椭圆形备份" stroke-width="0.6" cx="4.625" cy="4.5" r="4.8"></circle>
+            <text id="F" font-family="PingFang-SC-Medium, PingFang SC" font-size="8" font-weight="400" fill="#fff">
+                <tspan x="2.5" y="8">F</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
