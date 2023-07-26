@@ -29,11 +29,18 @@
               <span style="margin-left: 5px">{{ $t('header.home') }}</span>
             </el-dropdown-item>
           </router-link>
-          <!-- github -->
-          <a target="_blank" href="https://github.com">
+          <!-- Github -->
+          <a target="_blank" href="https://github.com/zanjiahao/Vue-ElPlus-Admin.git">
             <el-dropdown-item>
               <svg-icon name="github" />
               <span style="margin-left: 5px">{{ $t('header.github') }}</span>
+            </el-dropdown-item>
+          </a>
+          <!-- Gitee -->
+          <a target="_blank" href="https://gitee.com/zjh-sir/vue-el-plus-admin.git">
+            <el-dropdown-item>
+              <svg-icon name="gitee" />
+              <span style="margin-left: 5px">{{ $t('header.gitee') }}</span>
             </el-dropdown-item>
           </a>
           <!-- 页面设置 -->
