@@ -6,7 +6,7 @@ Vue-ElPlus-Admin 一款基于 Vue3、TypeScript、Vite4、Pinia、Element-Plus �
 
 ### 在线预览 👀
 
-- Link：暂无...
+- Link：http://47.94.135.42/#/home
 
 ### 代码仓库 ⭐
 

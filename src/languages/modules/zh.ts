@@ -14,7 +14,8 @@ export default {
     componentSize: '组件大小',
     language: '国际化',
     home: '首页',
-    github: 'github',
+    github: 'Github',
+    gitee: 'Gitee',
     pageSet: '页面设置',
     logout: '退出登录'
   },

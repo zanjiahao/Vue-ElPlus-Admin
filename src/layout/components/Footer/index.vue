@@ -12,7 +12,7 @@
 <script lang="ts" setup name="Footer">
 import { reactive, toRefs } from 'vue'
 const initData = reactive({
-  href: 'https://github.com',
+  href: 'https://gitee.com/zjh-sir/vue-el-plus-admin.git',
   target: '_blank',
   context: '2023 Vue ElementPlus Admin.'
 })
