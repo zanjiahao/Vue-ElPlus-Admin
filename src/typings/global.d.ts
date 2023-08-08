@@ -61,13 +61,13 @@ interface AlertOption extends ConfirmOption {
  * @param name ==> 菜单别名
  * @param redirect ==> 重定向地址
  * @param component ==> 视图文件路径
- * @param roles ==> 角色权限 例如: ['admin', 'editor', 'zjh'] 这里我暂定了三种类型人群
+ * @param roles ==> 角色权限 例如: ['admin', 'visitor', 'zjh'] 这里我暂定了三种类型人群
  * @param meta ==> 菜单信息
  * @param meta.icon ==> 菜单图标
  * @param meta.title ==> 菜单标题
  * @param meta.activeMenu ==> 当前路由为详情页时，需要高亮的菜单
  * @param meta.isLinkUrl ==> 是跳转外部链接的路径
- * @param meta.roles ==> // 例如: ['admin', 'editor', 'zjh']
+ * @param meta.roles ==> // 例如: ['admin', 'visitor', 'zjh']
  * @param meta.hidden ==> 是否隐藏
  * @param meta.isKeepAlive ==> 是否缓存
  * */

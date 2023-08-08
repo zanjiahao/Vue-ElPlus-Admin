@@ -19,4 +19,4 @@ export const adminLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${req
 
 export const zjhLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${requestIP}/login-zjh`)
 
-export const editorLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${requestIP}/login-editor`)
+export const visitorLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${requestIP}/login-visitor`)
