@@ -68,7 +68,7 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
     meta: {
       title: '菜单嵌套',
       icon: 'menu-nest',
-      roles: ['admin', 'zjh', 'editor'],
+      roles: ['admin', 'zjh', 'visitor'],
       isKeepAlive: true
     },
     children: [
@@ -79,7 +79,7 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
         meta: {
           title: '菜单1',
           icon: 'menu-nest',
-          roles: ['admin', 'zjh', 'editor'],
+          roles: ['admin', 'zjh', 'visitor'],
           isKeepAlive: true
         }
       },
@@ -89,7 +89,7 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
         meta: {
           title: '菜单2',
           icon: 'menu-nest',
-          roles: ['admin', 'zjh', 'editor'],
+          roles: ['admin', 'zjh', 'visitor'],
           isKeepAlive: true
         },
         children: [
@@ -100,7 +100,7 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
             meta: {
               title: '菜单2-1',
               icon: 'menu-nest',
-              roles: ['admin', 'zjh', 'editor'],
+              roles: ['admin', 'zjh', 'visitor'],
               isKeepAlive: true
             }
           },
@@ -158,7 +158,7 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
         meta: {
           title: '菜单3',
           icon: 'menu-nest',
-          roles: ['admin', 'zjh', 'editor'],
+          roles: ['admin', 'zjh', 'visitor'],
           isKeepAlive: true
         }
       }

@@ -12,10 +12,10 @@ export const mockUser: any = {
     introduction: '当然是开发者啦',
     roles: ['zjh']
   },
-  editor: {
-    name: 'editor',
+  visitor: {
+    name: '游客',
     avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif',
     introduction: '编辑或者其它用户',
-    roles: ['editor']
+    roles: ['visitor']
   }
 }

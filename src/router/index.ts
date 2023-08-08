@@ -47,7 +47,7 @@ router.beforeEach(async (to, from, next) => {
       } else {
         try {
           // 获取用户信息
-          // 角色必须是数组！例如：['admin']或，['developer'，'editor']
+          // 角色必须是数组！例如：['admin']或，['developer'，'visitor']
           const { roles } = await userStore.getInfo()
 
           // 基于角色生成可访问路由数组

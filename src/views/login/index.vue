@@ -163,7 +163,7 @@ function handleLogin() {
         } else if (['zjh', 'zanjiahao'].includes(username)) {
           resp = await api.UserApi.zjhLoginApi()
         } else {
-          resp = await api.UserApi.editorLoginApi()
+          resp = await api.UserApi.visitorLoginApi()
         }
         const resData = resp?.data
         if (resData) {
