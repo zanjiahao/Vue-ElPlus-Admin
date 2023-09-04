@@ -1,5 +1,5 @@
 import request from '@/plugins/request'
-const requestIP = 'https://mock.apifox.cn/m1/1982890-0-default'
+const requestIp = '/api/mock'
 
 // 接口返回的结构体
 interface ManageResult<T = {}> {
@@ -15,8 +15,8 @@ interface AdminLoginRes {
 }
 
 // 获取登录用户信息
-export const adminLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${requestIP}/login-admin`)
+export const adminLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${requestIp}/login-admin`)
 
-export const zjhLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${requestIP}/login-zjh`)
+export const zjhLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${requestIp}/login-zjh`)
 
-export const visitorLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${requestIP}/login-visitor`)
+export const visitorLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${requestIp}/login-visitor`)

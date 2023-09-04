@@ -38,19 +38,21 @@ export default defineConfig({
   server: {
     //使用IP能访问
     host: '0.0.0.0',
+    // 端口
+    port: 8090,
     // 热更新
     hmr: true,
     //设为 true 时若端口已被占用则会直接退出，而不是尝试下一个可用端口
     strictPort: false,
+
     //自定义代理规则
     proxy: {
-      // 选项写法
-      // "/api": {
-      //   target: "https://www.baidu.com",
-      //   // target: "http://192.168.0.50:8083",
-      //   changeOrigin: true,
-      //   rewrite: (path) => path.replace(/^\/api/, ""),
-      // },
+      // mock 数据相关前缀
+      '/api/mock': {
+        target: 'https://mock.apifox.cn/m1/1982890-0-default/',
+        changeOrigin: true,
+        rewrite: path => path.replace(new RegExp(`^/api/mock`), '')
+      }
     }
   }
 })

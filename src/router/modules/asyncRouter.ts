@@ -207,7 +207,7 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
     meta: {
       title: '指令',
       icon: 'menu-direct',
-      roles: ['zjh'],
+      roles: ['admin', 'zjh'],
       isKeepAlive: true
     },
     children: [
@@ -218,7 +218,29 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
         meta: {
           title: '防抖指令',
           icon: 'menu-direct',
-          roles: ['zjh'],
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
+      },
+      {
+        path: 'throttle-direct',
+        component: () => import('@/views/directives/throttleDirect/index.vue'),
+        name: 'ThrottleDirect',
+        meta: {
+          title: '节流指令',
+          icon: 'menu-direct',
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
+      },
+      {
+        path: 'Watermark-direct',
+        component: () => import('@/views/directives/watermarkDirect/index.vue'),
+        name: 'WatermarkDirect',
+        meta: {
+          title: '水印指令',
+          icon: 'menu-direct',
+          roles: ['admin', 'zjh'],
           isKeepAlive: true
         }
       }

@@ -11,9 +11,7 @@ import 'element-plus/dist/index.css'
 import SvgIcon from '@/components/svgIcon/index.vue'
 import I18n from '@/languages/index'
 import VueGridLayout from 'vue-grid-layout'
-// 自定义指令功能未完待续... todo
-// custom directives
-// import directives from "@/directives";
+import directives from '@/directives' // 自定义指令
 
 const app = createApp(App)
 Object.keys(Icons).forEach(key => {
@@ -24,6 +22,6 @@ app.use(ElementPlus)
 app.use(VueGridLayout)
 app.use(I18n)
 app.use(Pinia)
-// app.use(directives)
+app.use(directives)
 app.use(router)
 app.mount('#app')
