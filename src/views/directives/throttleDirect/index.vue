@@ -1,7 +1,9 @@
 <template>
   <div class="card content-box">
-    <span class="text">Lodash 节流指令</span>
-    <el-button type="primary" v-throttle="throttleClick">节流按钮 (每隔1秒后执行)</el-button>
+    <span class="text">Lodash 节流指令🌞🌞🌞</span>
+    <el-button type="primary" v-throttle="throttleClick">
+      节流按钮 (每隔1秒后执行)
+    </el-button>
   </div>
 </template>
 

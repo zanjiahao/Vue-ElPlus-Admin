@@ -9,7 +9,10 @@
       <transition-group name="breadcrumb">
         <el-breadcrumb-item v-for="item in breadcrumbList" :key="item.path">
           <div class="el-breadcrumb__inner is-link" @click="onBreadcrumbClick(item)">
-            <svg-icon :name="item.meta.icon" v-show="item.meta.icon && globalStore.breadcrumbIcon"></svg-icon>
+            <svg-icon
+              v-show="item.meta.icon && globalStore.breadcrumbIcon"
+              :name="item.meta.icon">
+            </svg-icon>
             <span class="breadcrumb-title">{{ item.meta.title }}</span>
           </div>
         </el-breadcrumb-item>
@@ -57,6 +60,7 @@ const onBreadcrumbClick = (item: MenuType.MenuOptions) => {
   display: flex;
   align-items: center;
   padding-right: 50px;
+  height: 20px;
   overflow: hidden;
   mask-image: linear-gradient(90deg, #000000 0%, #000000 calc(100% - 50px), transparent);
   .el-breadcrumb {

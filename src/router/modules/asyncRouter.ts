@@ -37,6 +37,17 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
     },
     children: [
       {
+        path: 'retrieve-input',
+        component: () => import('@/views/assembly/retrieveInput/index.vue'),
+        name: 'RetrieveInput',
+        meta: {
+          title: '检索输入框',
+          icon: 'menu-component',
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
+      },
+      {
         path: 'draggable-sort',
         component: () => import('@/views/assembly/draggableSort/index.vue'),
         name: 'DraggableSort',
@@ -54,7 +65,7 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
         meta: {
           title: '拖拽拉伸',
           icon: 'menu-component',
-          roles: ['zjh'],
+          roles: ['admin', 'zjh'],
           isKeepAlive: true
         }
       }
@@ -117,7 +128,8 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
               {
                 path: 'menu-nest221',
                 name: 'Nest221',
-                component: () => import('@/views/menuNest/Nest2/Nest22/Nest221/index.vue'),
+                component: () =>
+                  import('@/views/menuNest/Nest2/Nest22/Nest221/index.vue'),
                 meta: {
                   title: '菜单2-2-1',
                   icon: 'menu-nest',
@@ -128,7 +140,8 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
               {
                 path: 'menu-nest222',
                 name: 'Nest222',
-                component: () => import('@/views/menuNest/Nest2/Nest22/Nest222/index.vue'),
+                component: () =>
+                  import('@/views/menuNest/Nest2/Nest22/Nest222/index.vue'),
                 meta: {
                   title: '菜单2-2-2',
                   icon: 'menu-nest',

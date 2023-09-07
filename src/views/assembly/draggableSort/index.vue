@@ -5,7 +5,11 @@
 -->
 <template>
   <div class="draggable-wrapper card">
-    <div class="draggable-item" v-for="(item, index) in draggableItems" :key="item" :style="{ background: item }">
+    <div
+      class="draggable-item"
+      v-for="(item, index) in draggableItems"
+      :key="item"
+      :style="{ background: item }">
       <h3>{{ index + 1 }}</h3>
     </div>
   </div>
@@ -14,7 +18,17 @@
 import Sortable from 'sortablejs'
 import { ref, onMounted } from 'vue'
 
-const draggableItems = ref(['#87bba2', '#ff9b54', '#73628a', '#76c893', '#619b8a', '#55828b', '#427aa1', '#38a3a5', '#fcca46'])
+const draggableItems = ref([
+  '#87bba2',
+  '#ff9b54',
+  '#73628a',
+  '#76c893',
+  '#619b8a',
+  '#55828b',
+  '#427aa1',
+  '#38a3a5',
+  '#fcca46'
+])
 
 onMounted(() => {
   tabsDrop()

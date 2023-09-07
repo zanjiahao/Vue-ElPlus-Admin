@@ -10,6 +10,8 @@ $subMenuBg: #1f2d3d;
 $subMenuHover: #001528;
 $sideBarWidth: 210px;
 $sideBarHeight: 50px;
+$toolHerClr: rgb(191 203 217); // 工具栏颜色
+$toolVerClr: var(--el-text-color-primary); // 工具栏颜色
 
 :export {
   menuText: $menuText;
@@ -21,4 +23,6 @@ $sideBarHeight: 50px;
   subMenuHover: $subMenuHover;
   sideBarWidth: $sideBarWidth;
   sideBarHeight: $sideBarHeight;
+  toolHerClr: $toolHerClr;
+  toolVerClr: $toolVerClr;
 }

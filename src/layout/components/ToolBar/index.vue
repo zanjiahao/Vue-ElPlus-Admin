@@ -5,15 +5,19 @@
 -->
 <template>
   <div class="right-menu" :class="{ 'ver-style': isShowVerticalStyle }">
+    <Guide class="right-menu-item hover-effect ver-clr" />
     <Language class="right-menu-item hover-effect ver-clr" />
     <div class="right-menu-item hover-effect ver-clr" @click="openSettingsDrawer">
-      <svg-icon name="settings" />
+      <svg-icon id="guide-settings" name="settings" />
     </div>
-    <Fullscreen id="screenfull" class="right-menu-item hover-effect ver-clr" />
+    <Fullscreen class="right-menu-item hover-effect ver-clr" />
     <div class="user-name ver-clr">
       {{ userStore.name }}
     </div>
-    <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click" placement="top-start">
+    <el-dropdown
+      class="avatar-container right-menu-item hover-effect"
+      trigger="click"
+      placement="top-start">
       <div class="avatar-wrapper">
         <img :src="userStore.avatar" class="user-avatar" />
         <el-icon class="icon-caret ver-clr">
@@ -51,7 +55,9 @@
           <!-- 退出登录 -->
           <el-dropdown-item divided @click="logout">
             <svg-icon name="logout" />
-            <span style="display: inline-block; margin-left: 5px">{{ $t('header.logout') }}</span>
+            <span style="display: inline-block; margin-left: 5px">{{
+              $t('header.logout')
+            }}</span>
           </el-dropdown-item>
         </el-dropdown-menu>
       </template>
@@ -62,6 +68,7 @@
 <script lang="ts" setup name="ToolBar">
 import Fullscreen from '../Fullscreen/index.vue'
 import Language from '../Language/index.vue'
+import Guide from '../Guide/index.vue'
 import { elConfirm } from '@/utils/element'
 import { computed } from 'vue'
 import { useRouter } from 'vue-router'
@@ -94,8 +101,8 @@ function logout() {
 </script>
 
 <style lang="scss" scoped>
-$toolHerClr: rgb(191 203 217);
-$toolVerClr: var(--el-text-color-primary);
+@import '@/styles/variables.module.scss';
+
 .right-menu {
   display: flex;
   width: auto;
@@ -119,7 +126,7 @@ $toolVerClr: var(--el-text-color-primary);
     height: 100%;
     padding: 0 8px;
     font-size: 18px;
-    color: rgb(191, 203, 217);
+    color: $toolHerClr;
     vertical-align: text-bottom;
     &.hover-effect {
       cursor: pointer;
