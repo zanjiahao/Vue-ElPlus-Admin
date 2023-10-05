@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --host --open",
     "serve": "vite --host --open",
-    "build": "vue-tsc && vite build",
+    "build": "vite build",
     "preview": "vite preview --open",
     "lint:eslint": "eslint --fix --ext .js,.ts,.vue ./src",
     "lint:prettier": "prettier --write \"src/**/*.{js,ts,json,tsx,css,less,scss,vue,html,md}\"",
@@ -16,10 +16,13 @@
     "@element-plus/icons-vue": "^2.1.0",
     "@vueuse/core": "^10.1.0",
     "axios": "^1.4.0",
+    "clipboard": "^2.0.11",
+    "driver.js": "^0.9.8",
     "element-plus": "^2.3.4",
     "js-cookie": "^3.0.5",
-    "nprogress": "^0.2.0",
+    "lodash": "^4.17.21",
     "mitt": "^3.0.0",
+    "nprogress": "^0.2.0",
     "path-browserify": "^1.0.1",
     "pinia": "^2.0.35",
     "pinia-plugin-persistedstate": "^3.1.0",
@@ -29,7 +32,8 @@
     "vue": "^3.2.47",
     "vue-grid-layout": "^3.0.0-beta1",
     "vue-i18n": "^9.2.2",
-    "vue-router": "^4.0.13"
+    "vue-router": "^4.0.13",
+    "vue3-json-viewer": "^2.2.2"
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.3",
@@ -55,6 +59,7 @@
     "stylelint-config-recommended-vue": "^1.4.0",
     "stylelint-config-standard": "^30.0.1",
     "stylelint-config-standard-scss": "^7.0.1",
+    "terser": "^5.19.2",
     "typescript": "^5.0.4",
     "vite": "^4.3.2",
     "vite-plugin-eslint": "^1.8.1",

@@ -1,3 +1,5 @@
+ /* 共同的 */
+
 /* flex */
 .flx-center {
   display: flex;
@@ -42,16 +44,6 @@
 .break-word {
   word-break: break-all;
   word-wrap: break-word;
-}
-
-/* scroll bar */
-::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
-}
-::-webkit-scrollbar-thumb {
-  background-color: var(--el-border-color-darker);
-  border-radius: 20px;
 }
 
 /* nprogress */

@@ -12,14 +12,18 @@
     </el-divider>
     <div class="layout-box mb30">
       <el-tooltip effect="dark" content="横向" placement="top" :show-after="200">
-        <div :class="['layout-item layout-horizontal', { 'is-active': layout == 'horizontal' }]" @click="setLayout('horizontal')">
+        <div
+          :class="['layout-item layout-horizontal', { 'is-active': layout == 'horizontal' }]"
+          @click="setLayout('horizontal')">
           <div class="layout-dark"></div>
           <div class="layout-content"></div>
           <el-icon v-if="layout == 'horizontal'"><CircleCheckFilled /></el-icon>
         </div>
       </el-tooltip>
       <el-tooltip effect="dark" content="纵向" placement="top" :show-after="200">
-        <div :class="['layout-item layout-vertical', { 'is-active': layout == 'vertical' }]" @click="setLayout('vertical')">
+        <div
+          :class="['layout-item layout-vertical', { 'is-active': layout == 'vertical' }]"
+          @click="setLayout('vertical')">
           <div class="layout-dark"></div>
           <div class="layout-container">
             <div class="layout-light"></div>

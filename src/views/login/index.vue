@@ -5,7 +5,13 @@
 -->
 <template>
   <div class="login-container">
-    <el-form ref="loginFormRef" :model="loginForm" :rules="rules" class="login-form" autocomplete="on" label-position="left">
+    <el-form
+      ref="loginFormRef"
+      :model="loginForm"
+      :rules="rules"
+      class="login-form"
+      autocomplete="on"
+      label-position="left">
       <div class="title-container">
         <h3 class="title">Login</h3>
       </div>
@@ -24,7 +30,11 @@
           autocomplete="on" />
       </el-form-item>
 
-      <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
+      <el-tooltip
+        v-model="capsTooltip"
+        content="Caps lock is On"
+        placement="right"
+        manual>
         <el-form-item prop="password">
           <span class="svg-container">
             <svg-icon name="password" class-name="icon-style" />
@@ -42,7 +52,9 @@
             @blur="capsTooltip = false"
             @keyup.enter="handleLogin" />
           <span class="show-pwd" @click="showPwd">
-            <svg-icon :name="passwordType === 'password' ? 'eye' : 'eye-open'" class-name="icon-style" />
+            <svg-icon
+              :name="passwordType === 'password' ? 'eye' : 'eye-open'"
+              class-name="icon-style" />
           </span>
         </el-form-item>
       </el-tooltip>
@@ -79,14 +91,22 @@ import { ref, reactive, toRefs, nextTick, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 const router = useRouter()
 const route = useRoute()
-const validateUsername = (rule: unknown, value: string | undefined, callback: (msg?: string) => void) => {
+const validateUsername = (
+  rule: unknown,
+  value: string | undefined,
+  callback: (msg?: string) => void
+) => {
   if (!value) {
     callback('请输入用户名')
   } else {
     callback()
   }
 }
-const validatePassword = (rule: unknown, value: string | undefined, callback: (msg?: string) => void) => {
+const validatePassword = (
+  rule: unknown,
+  value: string | undefined,
+  callback: (msg?: string) => void
+) => {
   if (!value || value.length < 6) {
     callback('密码不能少于6位')
   } else {
@@ -163,7 +183,7 @@ function handleLogin() {
         } else if (['zjh', 'zanjiahao'].includes(username)) {
           resp = await api.UserApi.zjhLoginApi()
         } else {
-          resp = await api.UserApi.editorLoginApi()
+          resp = await api.UserApi.visitorLoginApi()
         }
         const resData = resp?.data
         if (resData) {

@@ -17,7 +17,7 @@
       <header class="app-header">
         <div class="head-left">
           <div class="sidebar-switch flx-center" @click="changeCollapse">
-            <svg-icon :name="collapseIcon"></svg-icon>
+            <svg-icon id="guide-collapseIcon" :name="collapseIcon"></svg-icon>
           </div>
           <Breadcrumb v-if="globalStore.breadcrumb" />
         </div>
@@ -142,9 +142,10 @@ function changeCollapse() {
       border-bottom: 1px solid var(--el-border-color-light);
       .head-left {
         display: flex;
+        align-items: center;
         .sidebar-switch {
           width: $sideBarHeight;
-          height: $sideBarHeight;
+          height: 100%;
           font-size: 20px;
           cursor: pointer;
         }

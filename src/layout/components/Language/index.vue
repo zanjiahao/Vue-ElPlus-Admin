@@ -5,7 +5,7 @@
 -->
 <template>
   <el-dropdown trigger="click" @command="changeLanguage">
-    <span><svg-icon name="language"></svg-icon></span>
+    <span><svg-icon id="guide-language" name="language"></svg-icon></span>
     <template #dropdown>
       <el-dropdown-menu>
         <el-dropdown-item

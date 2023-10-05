@@ -1,9 +1,7 @@
-import * as UserApi from './User'
-// import * as ProjectConfigApi from './ProjectConfig'
-// import * as RetrieveInputApi from './RetrieveInput'
+import * as UserApi from './UserApi'
+import * as RetrieveInputApi from './RetrieveInputApi'
 
 export default {
-  UserApi
-  // ProjectConfigApi,
-  // RetrieveInputApi
+  UserApi,
+  RetrieveInputApi
 }

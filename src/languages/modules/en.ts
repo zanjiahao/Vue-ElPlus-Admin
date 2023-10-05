@@ -15,6 +15,7 @@ export default {
     language: 'Language',
     home: 'Home Page',
     github: 'Github',
+    gitee: 'Gitee',
     pageSet: 'Page Set',
     logout: 'Logout'
   },

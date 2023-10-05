@@ -1,0 +1,193 @@
+/* RetrieveInput */
+#serach-input-wrap {
+  position: relative;
+  .serach-input {
+    :deep(.el-input__inner) {
+      padding-right: 32px;
+    }
+    .tips-pic {
+      position: absolute;
+      top: 0;
+      right: 0;
+      min-width: 32px;
+      height: 32px;
+      line-height: 32px;
+      font-size: 16px;
+      text-align: center;
+      cursor: pointer;
+    }
+  }
+
+  .triangle {
+    position: absolute;
+  }
+  .triangle::before {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 40px;
+    z-index: 6;
+    width: 0;
+    height: 0;
+    border: 6px solid;
+    border-color: transparent transparent #ebeef5;
+  }
+  .triangle::after {
+    position: absolute;
+    content: '';
+    top: 2px;
+    left: 40px;
+    z-index: 6;
+    width: 0;
+    height: 0;
+    border: 6px solid;
+    border-color: transparent transparent #fff;
+  }
+
+  .text-overflow-hidden {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  // 菜单下拉选项样式
+  @import '@/styles/scroll.scss';
+  #menus-list {
+    position: absolute;
+    margin: 12px 0 5px 0;
+    padding: 5px 0;
+    width: 100%;
+    max-height: 300px;
+    overflow: auto;
+    border-radius: 4px;
+    border: 1px solid #dcdfe6;
+    background-color: #fff;
+    z-index: 5;
+    box-sizing: border-box;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+    .dropdown-item {
+      display: flex;
+      margin-bottom: 1px;
+      padding-right: 10px;
+      height: 32px;
+      line-height: 32px;
+      font-size: 12px;
+      transition: background-color 0.15s ease; // 移入的时候过渡
+      cursor: pointer;
+      color: #606266;
+      justify-content: space-between;
+      .item-value {
+        display: flex;
+        max-width: 49%;
+        @extend .text-overflow-hidden;
+        .item-type-icon {
+          width: 32px;
+          text-align: center;
+          .svg-icon {
+            font-size: 18px;
+            color: inherit;
+          }
+        }
+        .field-clr {
+          color: #af6501;
+          background: #fef6e6;
+        }
+        .value-clr {
+          color: #207b72;
+          background: #e6f2f1;
+        }
+        .colon-clr {
+          color: #006bb4;
+          background: #e6f0f8;
+        }
+        .continue-clr {
+          color: #7800b0;
+          background: #f2e6f6;
+        }
+        .item-text {
+          display: inline-block;
+          width: calc(100% - 32px);
+          text-indent: 5px;
+          @extend .text-overflow-hidden;
+        }
+      }
+      .normal-width {
+        max-width: 100%;
+      }
+      .item-description {
+        display: flex;
+        max-width: 49%;
+        color: #979ba5;
+        justify-content: flex-end;
+        @extend .text-overflow-hidden;
+        .item-callout {
+          display: inline-block;
+          margin: 6px 4px;
+          padding: 0 5px;
+          max-width: 63%;
+          height: 20px;
+          line-height: 20px;
+          color: #555555;
+          background: #e9edf2;
+          border-radius: 2px;
+          @extend .text-overflow-hidden;
+        }
+      }
+    }
+    .dropdown-item:hover {
+      background-color: #f5f8ff;
+      .item-callout {
+        background-color: #fff;
+      }
+      .field-clr,
+      .value-clr,
+      .colon-clr,
+      .continue-clr {
+        color: #010101;
+        .svg-icon {
+          color: #594d90;
+        }
+      }
+      .field-clr {
+        background: #fef6e6;
+      }
+      .value-clr {
+        background: #cce5e3;
+      }
+      .colon-clr {
+        background: #cce1f0;
+      }
+      .continue-clr {
+        background: #e4cced;
+      }
+    }
+  }
+
+  .active-event {
+    background-color: #f5f7fa;
+    .item-callout {
+      background-color: #fff !important;
+    }
+    .field-clr,
+    .value-clr,
+    .colon-clr,
+    .continue-clr {
+      color: #010101 !important;
+      .svg-icon {
+        color: #594d90 !important;
+      }
+    }
+    .field-clr {
+      background: #fef6e6 !important;
+    }
+    .value-clr {
+      background: #cce5e3 !important;
+    }
+    .colon-clr {
+      background: #cce1f0 !important;
+    }
+    .continue-clr {
+      background: #e4cced !important;
+    }
+  }
+}
