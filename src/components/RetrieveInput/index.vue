@@ -30,18 +30,10 @@
     <div v-if="renderDropdown" class="triangle" />
     <!-- 下拉列表 -->
     <transition name="el-zoom-in-top">
-      <div
-        v-if="renderDropdown"
-        id="menus-list"
-        ref="dropdownRef"
-        @click="handleClickDropdown">
+      <div v-if="renderDropdown" id="menus-list" ref="dropdownRef" @click="handleClickDropdown">
         <!-- field 列表 -->
         <div v-if="showFields">
-          <div
-            v-for="item in fieldList"
-            :key="item.id"
-            class="dropdown-item"
-            @click="handleClickField(item)">
+          <div v-for="item in fieldList" :key="item.id" class="dropdown-item" @click="handleClickField(item)">
             <div class="item-value">
               <div class="item-type-icon field-clr">
                 <svg-icon name="icon-field"></svg-icon>
@@ -59,11 +51,7 @@
         </div>
         <!-- value 列表 -->
         <div v-if="showValue">
-          <div
-            v-for="item in valueList"
-            :key="item.id"
-            class="dropdown-item"
-            @click="handleClickValue(item)">
+          <div v-for="item in valueList" :key="item.id" class="dropdown-item" @click="handleClickValue(item)">
             <div class="item-value normal-width">
               <div class="item-type-icon value-clr">
                 <svg-icon name="icon-value"></svg-icon>
@@ -74,11 +62,7 @@
         </div>
         <!-- : :* -->
         <div v-if="showColon">
-          <div
-            v-for="item in colonList"
-            :key="item.id"
-            class="dropdown-item"
-            @click="handleClickColon(item)">
+          <div v-for="item in colonList" :key="item.id" class="dropdown-item" @click="handleClickColon(item)">
             <div class="item-value">
               <div class="item-type-icon colon-clr">
                 <svg-icon name="icon-colon"></svg-icon>
@@ -95,11 +79,7 @@
         </div>
         <!-- AND OR -->
         <div v-if="showContinue">
-          <div
-            v-for="item in continueList"
-            :key="item.id"
-            class="dropdown-item"
-            @click="handleClickContinue(item)">
+          <div v-for="item in continueList" :key="item.id" class="dropdown-item" @click="handleClickContinue(item)">
             <div class="item-value">
               <div class="item-type-icon continue-clr">
                 <svg-icon name="icon-continue"></svg-icon>
@@ -123,16 +103,7 @@
 <script lang="ts" setup>
 import lodash from 'lodash'
 import { outline } from './outline'
-import {
-  ref,
-  reactive,
-  toRefs,
-  nextTick,
-  computed,
-  watch,
-  onMounted,
-  onBeforeUnmount
-} from 'vue'
+import { ref, reactive, toRefs, nextTick, computed, watch, onMounted, onBeforeUnmount } from 'vue'
 const emit = defineEmits(['update:input-value'])
 
 const props = defineProps({
@@ -206,10 +177,7 @@ const {
 
 // computed 区域
 const renderDropdown = computed(() => {
-  return (
-    showDropdown.value &&
-    (showFields.value || showValue.value || showColon.value || showContinue.value)
-  )
+  return showDropdown.value && (showFields.value || showValue.value || showColon.value || showContinue.value)
 })
 
 // watch 监听区域
@@ -510,9 +478,7 @@ function calculateDropdown() {
     const valueMap = props.dropdownData[confirmField as string]
     if (valueMap) {
       const inputValue = valueResult.groups?.value
-      valueList.value = getValueList(valueMap).filter(item =>
-        item.includes(inputValue as string)
-      )
+      valueList.value = getValueList(valueMap).filter(item => item.includes(inputValue as string))
       showWhichDropdown(valueList.value.length ? 'Value' : '')
     } else {
       showWhichDropdown('')

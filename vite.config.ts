@@ -24,7 +24,7 @@ export default defineConfig({
     }
   },
   resolve: {
-    //配置根路径别名： import('@/pages/login/login.vue')
+    // 配置根路径别名： import('@/pages/login/login.vue')
     alias: {
       '@': resolve(__dirname, 'src'),
       // 注意一定不要随意命名，a b c这样的，项目的目录也不能为关键字保留字！！

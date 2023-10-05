@@ -1,5 +1,6 @@
 import request from '@/plugins/request'
-const requestIp = '/api/mock'
+const env = import.meta.env
+const requestIp = env.VITE_USER_NODE_ENV === 'production' ? env.VITE_API_URL : '/api/mock'
 
 // 接口返回的结构体
 interface ManageResult<T = {}> {
