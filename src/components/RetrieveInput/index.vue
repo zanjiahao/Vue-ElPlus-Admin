@@ -16,7 +16,8 @@
         type="text"
         @blur="handleBlur"
         @focus="handleFocus"
-        @input="inputDebounce" />
+        @input="inputDebounce"
+      />
       <div v-if="props.tooltipsShow" class="tips-pic">
         <el-tooltip :open-delay="600" effect="dark" placement="top">
           <template #content>

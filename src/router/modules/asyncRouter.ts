@@ -71,6 +71,53 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
       }
     ]
   },
+  // 视觉动效
+  {
+    path: '/visual-dynamic',
+    name: 'visualDynamic',
+    component: Layout,
+    meta: {
+      title: '视觉动效',
+      icon: 'menu-components',
+      roles: ['admin', 'zjh'],
+      isKeepAlive: true
+    },
+    children: [
+      {
+        path: 'dynamic-btns',
+        component: () => import('@/views/visualDynamic/dynamicBtns/index.vue'),
+        name: 'DynamicBtns',
+        meta: {
+          title: '动效按钮',
+          icon: 'menu-dynamic',
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
+      },
+      {
+        path: 'visual-design',
+        component: () => import('@/views/visualDynamic/visualDesign/index.vue'),
+        name: 'VisualDesign',
+        meta: {
+          title: '视觉设计',
+          icon: 'menu-dynamic',
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
+      },
+      {
+        path: 'rich-dynamic-effect',
+        component: () => import('@/views/visualDynamic/richDynamicEffect/index.vue'),
+        name: 'RichDynamicEffect',
+        meta: {
+          title: '丰富动效',
+          icon: 'menu-dynamic',
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
+      }
+    ]
+  },
   // 菜单嵌套
   {
     path: '/menu-nest',
@@ -128,8 +175,7 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
               {
                 path: 'menu-nest221',
                 name: 'Nest221',
-                component: () =>
-                  import('@/views/menuNest/Nest2/Nest22/Nest221/index.vue'),
+                component: () => import('@/views/menuNest/Nest2/Nest22/Nest221/index.vue'),
                 meta: {
                   title: '菜单2-2-1',
                   icon: 'menu-nest',
@@ -140,8 +186,7 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
               {
                 path: 'menu-nest222',
                 name: 'Nest222',
-                component: () =>
-                  import('@/views/menuNest/Nest2/Nest22/Nest222/index.vue'),
+                component: () => import('@/views/menuNest/Nest2/Nest22/Nest222/index.vue'),
                 meta: {
                   title: '菜单2-2-2',
                   icon: 'menu-nest',
@@ -213,6 +258,87 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
       }
     ]
   },
+  // echarts图表
+  {
+    path: '/echarts',
+    name: 'echarts',
+    component: Layout,
+    meta: {
+      title: 'ECharts',
+      icon: 'menu-echarts',
+      roles: ['admin', 'zjh'],
+      isKeepAlive: true
+    },
+    children: [
+      {
+        path: 'column-chart',
+        component: () => import('@/views/echarts/columnChart/index.vue'),
+        name: 'ColumnChart',
+        meta: {
+          title: '柱状图',
+          icon: 'menu-echarts',
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
+      },
+      {
+        path: 'line-chart',
+        component: () => import('@/views/echarts/lineChart/index.vue'),
+        name: 'LineChart',
+        meta: {
+          title: '折线图',
+          icon: 'menu-echarts',
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
+      },
+      {
+        path: 'nested-chart',
+        component: () => import('@/views/echarts/NestedChart/index.vue'),
+        name: 'NestedChart',
+        meta: {
+          title: '嵌套环形图',
+          icon: 'menu-echarts',
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
+      },
+      {
+        path: 'pie-chart',
+        component: () => import('@/views/echarts/pieChart/index.vue'),
+        name: 'PieChart',
+        meta: {
+          title: '饼图',
+          icon: 'menu-echarts',
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
+      },
+      {
+        path: 'radar-chart',
+        component: () => import('@/views/echarts/radarChart/index.vue'),
+        name: 'RadarChart',
+        meta: {
+          title: '雷达图',
+          icon: 'menu-echarts',
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
+      },
+      {
+        path: 'water-chart',
+        component: () => import('@/views/echarts/waterChart/index.vue'),
+        name: 'WaterChart',
+        meta: {
+          title: '水型图',
+          icon: 'menu-echarts',
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
+      }
+    ]
+  },
+  // 指令
   {
     path: '/directives',
     name: 'Directives',

@@ -5,11 +5,7 @@
 -->
 <template>
   <div class="draggable-wrapper card">
-    <div
-      class="draggable-item"
-      v-for="(item, index) in draggableItems"
-      :key="item"
-      :style="{ background: item }">
+    <div class="draggable-item" v-for="(item, index) in draggableItems" :key="item" :style="{ background: item }">
       <h3>{{ index + 1 }}</h3>
     </div>
   </div>

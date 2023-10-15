@@ -16,8 +16,10 @@ interface AdminLoginRes {
 }
 
 // 获取登录用户信息
-export const adminLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${requestIp}/login-admin`)
+export const adminLoginApi = (): PromiseRes<AdminLoginRes> =>
+  request.get(`${requestIp}/login-admin`)
 
 export const zjhLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${requestIp}/login-zjh`)
 
-export const visitorLoginApi = (): PromiseRes<AdminLoginRes> => request.get(`${requestIp}/login-visitor`)
+export const visitorLoginApi = (): PromiseRes<AdminLoginRes> =>
+  request.get(`${requestIp}/login-visitor`)

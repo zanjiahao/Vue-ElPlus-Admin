@@ -5,7 +5,11 @@
 -->
 <template>
   <template v-if="hasOneShowingChild(item.children, item) && !onlyOneChild.children">
-    <el-menu-item v-if="isShowOnlyChild" :index="resolvePath(onlyOneChild.path)" @click="handleClickMenu(onlyOneChild)">
+    <el-menu-item
+      v-if="isShowOnlyChild"
+      :index="resolvePath(onlyOneChild.path)"
+      @click="handleClickMenu(onlyOneChild)"
+    >
       <svg-icon :name="onlyOneChild.meta?.icon" class-name="icon-style" />
       <span class="sle">{{ onlyOneChild.meta?.title }}</span>
     </el-menu-item>
@@ -20,7 +24,8 @@
         v-for="childRoute in item.children"
         :key="childRoute.path"
         :item="childRoute"
-        :base-path="resolvePath(childRoute.path)" />
+        :base-path="resolvePath(childRoute.path)"
+      />
     </el-sub-menu>
   </template>
 </template>

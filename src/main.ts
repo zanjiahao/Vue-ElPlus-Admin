@@ -14,6 +14,8 @@ import VueGridLayout from 'vue-grid-layout'
 import directives from '@/directives' // 自定义指令
 import JsonViewer from 'vue3-json-viewer'
 import 'vue3-json-viewer/dist/index.css' //添加样式
+// import echarts from 'echarts'  //引入echarts
+// import 'echarts-liquidfill'
 
 const app = createApp(App)
 Object.keys(Icons).forEach(key => {

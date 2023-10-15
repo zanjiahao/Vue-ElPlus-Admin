@@ -15,7 +15,8 @@
           ref="searchIptRef"
           :input-value="retrieveContent"
           :dropdown-data="dropdownData"
-          :tooltips-show="true" />
+          :tooltips-show="true"
+        />
       </div>
       <el-button type="primary" @click="getDropdownList(true)">查询</el-button>
     </div>
@@ -25,7 +26,8 @@
         :value="jsonViewerData"
         :copyable="true"
         :sort="true"
-        :expand-depth="2">
+        :expand-depth="2"
+      >
         <template #copy>
           <span>复制</span>
         </template>

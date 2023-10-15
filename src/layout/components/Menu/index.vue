@@ -12,9 +12,15 @@
     :text-color="menuText"
     :active-text-color="menuActiveText"
     :ellipsis="true"
-    :collapse="isCollapse">
+    :collapse="isCollapse"
+  >
     <template v-if="isVertical">
-      <SubMenu v-for="routeItem in authRoutes" :key="routeItem.path" :item="routeItem" :base-path="routeItem.path" />
+      <SubMenu
+        v-for="routeItem in authRoutes"
+        :key="routeItem.path"
+        :item="routeItem"
+        :base-path="routeItem.path"
+      />
     </template>
     <template v-else>
       <div v-for="routeItem in authRoutes" :key="routeItem.path">

@@ -6,22 +6,16 @@
 <template>
   <div class="tabs-box">
     <div class="tabs-menu">
-      <el-tabs
-        v-model="tabsMenuValue"
-        type="card"
-        @tab-click="tabClick"
-        @tab-remove="tabRemove">
+      <el-tabs v-model="tabsMenuValue" type="card" @tab-click="tabClick" @tab-remove="tabRemove">
         <el-tab-pane
           v-for="item in tabsMenuList"
           :key="item.path"
           :label="item.title"
           :name="item.path"
-          :closable="item.close">
+          :closable="item.close"
+        >
           <template #label>
-            <svg-icon
-              :name="item.icon"
-              class="tabs-icon"
-              v-show="item.icon && tabsIcon"></svg-icon>
+            <svg-icon :name="item.icon" class="tabs-icon" v-show="item.icon && tabsIcon"></svg-icon>
             {{ item.title }}
           </template>
         </el-tab-pane>

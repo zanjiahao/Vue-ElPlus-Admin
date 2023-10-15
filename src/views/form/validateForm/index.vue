@@ -51,7 +51,6 @@
 
 <script setup lang="ts" name="dynamicForm">
 import { reactive, ref } from 'vue'
-// import { checkPhoneNumber } from "@/utils/eleValidate";
 import type { FormInstance, FormRules } from 'element-plus'
 import { ElMessage } from 'element-plus'
 

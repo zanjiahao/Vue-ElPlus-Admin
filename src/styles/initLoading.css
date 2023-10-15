@@ -1,4 +1,5 @@
 /* app 加载前留白处理 */
+/* 电池 */
 .app-init-loader {
   display: flex;
   flex-direction: column;
