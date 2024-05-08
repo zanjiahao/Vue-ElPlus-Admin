@@ -1,3 +1,8 @@
+<!--
+ * @Author: zanjiahao
+ * @LastEditors: zanjiahao
+ * @Description: Svg组件
+-->
 <template>
   <div v-if="isExternal" :style="styleExternalIcon" class="svg-external-icon svg-icon" />
   <svg v-else :class="svgClass" aria-hidden="true">
@@ -7,15 +12,15 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-const props = defineProps({
-  name: {
-    type: String,
-    required: true
-  },
-  className: {
-    type: String,
-    default: ''
-  }
+
+interface IProp {
+  name: string
+  className?: string
+}
+
+const props = withDefaults(defineProps<IProp>(), {
+  name: '',
+  className: ''
 })
 
 const isExternal = computed(() => isExternalPath(props.name))

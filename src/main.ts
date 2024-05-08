@@ -5,15 +5,17 @@ import Pinia from './store'
 import router from './router'
 import ElementPlus from 'element-plus'
 import * as Icons from '@element-plus/icons-vue'
-import 'virtual:svg-icons-register' // 引入注册脚本
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import 'element-plus/dist/index.css'
-import SvgIcon from '@/components/svgIcon/index.vue'
+import 'virtual:svg-icons-register' // 引入注册脚本
+import SvgIcon from '@/components/SvgIcon/index.vue'
 import I18n from '@/languages/index'
 import VueGridLayout from 'vue-grid-layout'
 import directives from '@/directives' // 自定义指令
 import JsonViewer from 'vue3-json-viewer'
 import 'vue3-json-viewer/dist/index.css' //添加样式
+// import echarts from 'echarts'  //引入echarts
+// import 'echarts-liquidfill'
 
 const app = createApp(App)
 Object.keys(Icons).forEach(key => {

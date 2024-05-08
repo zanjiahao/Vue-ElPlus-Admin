@@ -8,7 +8,8 @@
     <svg-icon
       id="guide-fullscreen"
       :name="isFullscreen ? 'exit-fullscreen' : 'fullscreen'"
-      class="svg-icon" />
+      class="svg-icon"
+    />
   </div>
 </template>
 

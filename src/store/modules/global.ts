@@ -10,7 +10,7 @@ export const useGlobalStore = defineStore({
     // 语言切换
     language: 'zh',
     // 布局模式 (horizontal | vertical)
-    layout: 'horizontal',
+    layout: 'vertical',
     // 主题颜色
     primary: defaultPrimary,
     // 暗黑模式

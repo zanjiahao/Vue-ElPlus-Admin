@@ -1,7 +1,9 @@
-import * as UserApi from './UserApi'
-import * as RetrieveInputApi from './RetrieveInputApi'
+import * as UserApi from './modules/UserApi'
+import * as RetrieveInputApi from './modules/RetrieveInputApi'
+import * as UploadApi from './modules/UploadApi'
 
 export default {
   UserApi,
-  RetrieveInputApi
+  RetrieveInputApi,
+  UploadApi
 }

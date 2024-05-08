@@ -1,7 +1,7 @@
 <!--
  * @Author: zanjiahao
  * @LastEditors: zanjiahao
- * @Description: project
+ * @Description: 这里是测试页面
 -->
 <template>
   <div class="project-box content-box card">
@@ -12,11 +12,16 @@
       <el-table-column prop="address" label="Address" />
     </el-table>
     <el-pagination :total="100" />
+    <el-button @click="addHandle">点击增加数量{{ countNum }}</el-button>
+
+    <!-- provide/inject Vue3使用案例 -->
+    <InjectDemoChild />
   </div>
 </template>
 
 <script lang="ts" setup name="ProjectTest">
-import { ref } from 'vue'
+import InjectDemoChild from './injectDemoChild.vue'
+import { ref, provide, reactive, toRefs } from 'vue'
 const tableData = ref([
   {
     date: '2016-05-03',
@@ -39,6 +44,13 @@ const tableData = ref([
     address: 'No. 189, Grove St, Los Angeles'
   }
 ])
+const countNum = ref(0)
+
+provide('dynamicCounter', countNum)
+
+function addHandle() {
+  countNum.value++
+}
 </script>
 
 <style lang="scss" scoped>

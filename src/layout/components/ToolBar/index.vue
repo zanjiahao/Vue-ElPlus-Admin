@@ -17,7 +17,8 @@
     <el-dropdown
       class="avatar-container right-menu-item hover-effect"
       trigger="click"
-      placement="top-start">
+      placement="top-start"
+    >
       <div class="avatar-wrapper">
         <img :src="userStore.avatar" class="user-avatar" />
         <el-icon class="icon-caret ver-clr">
@@ -55,9 +56,7 @@
           <!-- 退出登录 -->
           <el-dropdown-item divided @click="logout">
             <svg-icon name="logout" />
-            <span style="display: inline-block; margin-left: 5px">{{
-              $t('header.logout')
-            }}</span>
+            <span style="display: inline-block; margin-left: 5px">{{ $t('header.logout') }}</span>
           </el-dropdown-item>
         </el-dropdown-menu>
       </template>

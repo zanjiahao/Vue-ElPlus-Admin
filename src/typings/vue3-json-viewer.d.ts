@@ -1,11 +1,6 @@
+// TS声明文件(模块插件)-它可以用来扩展原有模块的类型
 declare module 'vue3-json-viewer' {
-  import {
-    AllowedComponentProps,
-    App,
-    Component,
-    ComponentCustomProps,
-    VNodeProps
-  } from 'vue'
+  import { AllowedComponentProps, App, Component, ComponentCustomProps, VNodeProps } from 'vue'
   interface JsonViewerProps {
     value: Object | Array<any> | string | number | boolean //对象
     expanded: boolean //是否自动展开
@@ -17,10 +12,7 @@ declare module 'vue3-json-viewer' {
     previewMode: boolean //是否可复制
     timeformat: (value: any) => string
   }
-  type JsonViewerType = JsonViewerProps &
-    VNodeProps &
-    AllowedComponentProps &
-    ComponentCustomProps
+  type JsonViewerType = JsonViewerProps & VNodeProps & AllowedComponentProps & ComponentCustomProps
   const JsonViewer: Component<JsonViewerType>
   export { JsonViewer }
   const def: { install: (app: App) => void }

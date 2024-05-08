@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import autoprefixer from 'autoprefixer'
 
 export default defineConfig({
   plugins: [
@@ -32,6 +33,17 @@ export default defineConfig({
       // 配置图片可以这样引用
       '/img': './src/assets',
       'vue-i18n': 'vue-i18n/dist/vue-i18n.cjs.js'
+    }
+  },
+  css: {
+    postcss: {
+      plugins: [
+        autoprefixer({
+          // 自动添加前缀
+          overrideBrowserslist: ['Android 4.1', 'iOS 7.1', 'Chrome > 31', 'ff > 31', 'ie >= 8', '> 1%'],
+          grid: true
+        })
+      ]
     }
   },
   // 跨域

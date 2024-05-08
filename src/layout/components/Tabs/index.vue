@@ -6,22 +6,16 @@
 <template>
   <div class="tabs-box">
     <div class="tabs-menu">
-      <el-tabs
-        v-model="tabsMenuValue"
-        type="card"
-        @tab-click="tabClick"
-        @tab-remove="tabRemove">
+      <el-tabs v-model="tabsMenuValue" type="card" @tab-click="tabClick" @tab-remove="tabRemove">
         <el-tab-pane
           v-for="item in tabsMenuList"
           :key="item.path"
           :label="item.title"
           :name="item.path"
-          :closable="item.close">
+          :closable="item.close"
+        >
           <template #label>
-            <svg-icon
-              :name="item.icon"
-              class="tabs-icon"
-              v-show="item.icon && tabsIcon"></svg-icon>
+            <svg-icon :name="item.icon" class="tabs-icon" v-show="item.icon && tabsIcon"></svg-icon>
             {{ item.title }}
           </template>
         </el-tab-pane>
@@ -92,14 +86,20 @@ const tabsDrop = () => {
 
 // 初始化需要固定的 tabs
 const initTabs = () => {
-  const tabsParams = {
-    icon: 'menu-home',
-    title: '首页',
-    path: '/home',
-    name: 'Home',
-    close: false
-  }
-  tabStore.addTabs(tabsParams)
+  const baseTab = [
+    {
+      icon: 'menu-home',
+      title: '首页',
+      path: '/home',
+      name: 'Home',
+      close: false
+    }
+  ]
+  // 避免登录情况下已经有除首页外的指定路由，那会在tab组件渲染之前在store变量内记录路由数据
+  // store内有的话就放置在首页后面
+  const oldTabs = tabStore.tabsMenuList.filter((item: any) => item.title !== '首页')
+  // 定制新的tabs列表
+  tabStore.setTabs(baseTab.concat(oldTabs as []))
 }
 
 // 跳转

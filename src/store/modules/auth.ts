@@ -13,7 +13,7 @@ export const useAuthStore = defineStore('auth', () => {
     addRoutes: [] // 需要添加的菜单权限列表, 留给退出登录时候清除路由使用
   })
 
-  // 获取动态路由路由
+  // 获取动态路由
   function generateAsyncRoutes(roles: string[]): any {
     return new Promise(resolve => {
       let accessedRoutes

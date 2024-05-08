@@ -23,7 +23,8 @@
       :is-resizable="true"
       :vertical-compact="true"
       :margin="[5, 5]"
-      :use-css-transforms="true">
+      :use-css-transforms="true"
+    >
       <grid-item v-for="item in layout" :x="item.x" :y="item.y" :w="item.w" :h="item.h" :i="item.i" :key="item.i">
         {{ item.i }}
       </grid-item>

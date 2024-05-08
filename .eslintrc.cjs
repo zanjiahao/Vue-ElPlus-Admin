@@ -11,19 +11,15 @@ module.exports = {
   // 优先级低于 parse 的语法解析配置
   parserOptions: {
     parser: '@typescript-eslint/parser',
-    ecmaVersion: 2020,
-    sourceType: 'module',
+    ecmaVersion: 2020, // 允许解析现代 ECMAScript 特性
+    sourceType: 'module', // 允许使用模块
     jsxPragma: 'React',
     ecmaFeatures: {
-      jsx: true
+      jsx: true // 允许对JSX语法进行解析
     }
   },
   // 继承某些已有的规则
-  extends: [
-    'plugin:vue/vue3-recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended'
-  ],
+  extends: ['plugin:vue/vue3-recommended', 'plugin:@typescript-eslint/recommended', 'plugin:prettier/recommended'],
   /**
    * "off" 或 0    ==>  关闭规则
    * "warn" 或 1   ==>  打开的规则作为警告（不影响代码执行）
@@ -32,7 +28,7 @@ module.exports = {
   rules: {
     // eslint (http://eslint.cn/docs/rules)
     'no-var': 'error', // 要求使用 let 或 const 而不是 var
-    'no-multiple-empty-lines': ['error', { max: 1 }], // 不允许多个空行
+    'no-multiple-empty-lines': ['error', { max: 2 }], // 不允许多个空行
     'prefer-const': 'off', // 使用 let 关键字声明但在初始分配后从未重新分配的变量，要求使用 const
     'no-use-before-define': 'off', // 禁止在 函数/类/变量 定义之前使用它们
     'no-irregular-whitespace': 'off', // 禁止不规则的空白

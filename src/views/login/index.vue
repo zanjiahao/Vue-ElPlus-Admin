@@ -11,7 +11,8 @@
       :rules="rules"
       class="login-form"
       autocomplete="on"
-      label-position="left">
+      label-position="left"
+    >
       <div class="title-container">
         <h3 class="title">Login</h3>
       </div>
@@ -27,14 +28,11 @@
           name="username"
           type="text"
           tabindex="1"
-          autocomplete="on" />
+          autocomplete="on"
+        />
       </el-form-item>
 
-      <el-tooltip
-        v-model="capsTooltip"
-        content="Caps lock is On"
-        placement="right"
-        manual>
+      <el-tooltip v-model="capsTooltip" content="Caps lock is On" placement="right" manual>
         <el-form-item prop="password">
           <span class="svg-container">
             <svg-icon name="password" class-name="icon-style" />
@@ -50,11 +48,10 @@
             autocomplete="on"
             @keyup="checkCapslock"
             @blur="capsTooltip = false"
-            @keyup.enter="handleLogin" />
+            @keyup.enter="handleLogin"
+          />
           <span class="show-pwd" @click="showPwd">
-            <svg-icon
-              :name="passwordType === 'password' ? 'eye' : 'eye-open'"
-              class-name="icon-style" />
+            <svg-icon :name="passwordType === 'password' ? 'eye' : 'eye-open'" class-name="icon-style" />
           </span>
         </el-form-item>
       </el-tooltip>
@@ -64,7 +61,8 @@
         type="primary"
         size="large"
         style="width: 100%; margin-bottom: 30px"
-        @click.prevent="handleLogin">
+        @click.prevent="handleLogin"
+      >
         Login
       </el-button>
 
@@ -91,22 +89,14 @@ import { ref, reactive, toRefs, nextTick, watch } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 const router = useRouter()
 const route = useRoute()
-const validateUsername = (
-  rule: unknown,
-  value: string | undefined,
-  callback: (msg?: string) => void
-) => {
+const validateUsername = (rule: unknown, value: string | undefined, callback: (msg?: string) => void) => {
   if (!value) {
     callback('请输入用户名')
   } else {
     callback()
   }
 }
-const validatePassword = (
-  rule: unknown,
-  value: string | undefined,
-  callback: (msg?: string) => void
-) => {
+const validatePassword = (rule: unknown, value: string | undefined, callback: (msg?: string) => void) => {
   if (!value || value.length < 6) {
     callback('密码不能少于6位')
   } else {
