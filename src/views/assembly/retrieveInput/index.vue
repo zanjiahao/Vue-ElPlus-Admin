@@ -41,6 +41,7 @@
 import api from '@/api'
 import { isEmpty as _isEmpty } from 'lodash'
 import RetrieveInput from '@/components/RetrieveInput/index.vue'
+import { InputData } from '@/components/RetrieveInput/types'
 import { reactive, toRefs } from 'vue'
 
 const initData = reactive({
@@ -60,7 +61,7 @@ async function getDropdownList(isClick: boolean = false): Promise<void> {
     const resData = resp.data?.dataList
     if (!_isEmpty(resData)) {
       const dropdownObj: Record<string, { fieldType: string; valueMap: any[] }> = {} // 转成检索输入框需要的数据结构
-      resData.forEach((item: RetrieveIptType.InputData) => {
+      resData.forEach((item: InputData) => {
         const { fieldName, fieldType, valueMap } = item
         if (!Object.prototype.hasOwnProperty.call(dropdownObj, fieldName)) {
           dropdownObj[fieldName] = {

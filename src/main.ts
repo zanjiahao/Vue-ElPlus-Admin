@@ -5,10 +5,10 @@ import Pinia from './store'
 import router from './router'
 import ElementPlus from 'element-plus'
 import * as Icons from '@element-plus/icons-vue'
-import 'virtual:svg-icons-register' // 引入注册脚本
 import 'element-plus/theme-chalk/dark/css-vars.css'
 import 'element-plus/dist/index.css'
-import SvgIcon from '@/components/svgIcon/index.vue'
+import 'virtual:svg-icons-register' // 引入注册脚本
+import SvgIcon from '@/components/SvgIcon/index.vue'
 import I18n from '@/languages/index'
 import VueGridLayout from 'vue-grid-layout'
 import directives from '@/directives' // 自定义指令

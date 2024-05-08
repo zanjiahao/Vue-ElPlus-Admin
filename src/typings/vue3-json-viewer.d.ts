@@ -1,3 +1,4 @@
+// TS声明文件(模块插件)-它可以用来扩展原有模块的类型
 declare module 'vue3-json-viewer' {
   import { AllowedComponentProps, App, Component, ComponentCustomProps, VNodeProps } from 'vue'
   interface JsonViewerProps {

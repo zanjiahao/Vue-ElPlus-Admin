@@ -12,15 +12,15 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-const props = defineProps({
-  name: {
-    type: String,
-    required: true
-  },
-  className: {
-    type: String,
-    default: ''
-  }
+
+interface IProp {
+  name: string
+  className?: string
+}
+
+const props = withDefaults(defineProps<IProp>(), {
+  name: '',
+  className: ''
 })
 
 const isExternal = computed(() => isExternalPath(props.name))

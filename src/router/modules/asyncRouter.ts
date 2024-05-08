@@ -68,6 +68,17 @@ export const asyncRoutes: MenuType.MenuOptions[] = [
           roles: ['admin', 'zjh'],
           isKeepAlive: true
         }
+      },
+      {
+        path: 'wang-editor',
+        component: () => import('@/views/assembly/wangEditor/index.vue'),
+        name: 'WangEditor',
+        meta: {
+          title: '富文本编辑器',
+          icon: 'menu-component',
+          roles: ['admin', 'zjh'],
+          isKeepAlive: true
+        }
       }
     ]
   },

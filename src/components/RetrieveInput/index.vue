@@ -105,6 +105,7 @@
 import lodash from 'lodash'
 import { outline } from './outline'
 import { ref, reactive, toRefs, nextTick, computed, watch, onMounted, onBeforeUnmount } from 'vue'
+import { Ingredient, ValueItemType, RetrieveInitDataType } from './types'
 const emit = defineEmits(['update:input-value'])
 
 const props = defineProps({
@@ -502,7 +503,7 @@ function calculateDropdown() {
 function showWhichDropdown(param: string) {
   const types = ['Fields', 'Value', 'Colon', 'Continue']
   for (const type of types) {
-    const key = `show${type}` as RetrieveIptType.Ingredient
+    const key = `show${type}` as Ingredient
     const bool = type === param
     initData[key] = bool
     if (bool) {
@@ -531,7 +532,7 @@ function showWhichDropdown(param: string) {
  * @param {Object} valueObj
  * @return {string[]}
  */
-function getValueList(valueObj: RetrieveIptType.ValueItemType) {
+function getValueList(valueObj: ValueItemType) {
   const { fieldType, valueMap } = valueObj
   if (fieldType === 'string') {
     return Object.keys(valueMap).map(item => `"${item}"`)

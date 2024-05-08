@@ -1,20 +1,19 @@
 /* retrieveInput */
-declare namespace RetrieveIptType {
-  type Ingredient = 'showFields' | 'showValue' | 'showColon' | 'showContinue'
 
-  // 可选字段列表类型
-  interface ValueItemType {
-    fieldType: string
-    valueMap: any[]
-  }
+export type Ingredient = 'showFields' | 'showValue' | 'showColon' | 'showContinue'
 
-  interface InputData extends ValueItemType {
-    fieldName: string
-  }
+// 可选字段列表类型
+export interface ValueItemType {
+  fieldType: string
+  valueMap: any[]
+}
+
+export interface InputData extends ValueItemType {
+  fieldName: string
 }
 
 // 检索输入组件初始化相关类型
-interface RetrieveInitDataType {
+export interface RetrieveInitDataType {
   tooltipContent: string // 规则提示
   separator: RegExp // 区分查询语句条件
   retrievedContent: string // 检索关键字
