@@ -1,7 +1,7 @@
 // mock数据 user info
 export const mockUser: any = {
   admin: {
-    name: 'admin',
+    name: '管理员',
     avatar: 'https://wpimg.wallstcn.com/f778738c-e4f8-4870-b634-56703b4acafe.gif', // 头像
     introduction: '最大管理员', // 介绍
     roles: ['admin'] // 角色
