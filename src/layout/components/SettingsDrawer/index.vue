@@ -86,7 +86,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted, onUnmounted } from 'vue'
 import { storeToRefs } from 'pinia'
 import { useTheme } from '@/hooks/useTheme'
 import { useGlobalStore, defaultPrimary } from '@/store/modules/global'
@@ -115,9 +115,16 @@ const setLayout = (val: any) => {
   globalStore.setGlobalState('layout', val)
 }
 
-// 打开主题设置
 const drawerVisible = ref(false)
-mittBus.on('mittOpenSettingDrawer', () => (drawerVisible.value = true))
+onMounted(() => {
+  // 打开主题设置
+  mittBus.on('open-setting-drawer', () => (drawerVisible.value = true))
+})
+
+// 移除
+onUnmounted(() => {
+  mittBus.off('open-setting-drawer', () => {})
+})
 </script>
 
 <style scoped lang="scss">

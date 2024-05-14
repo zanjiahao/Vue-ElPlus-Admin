@@ -14,11 +14,7 @@
     <div class="user-name ver-clr">
       {{ userStore.name }}
     </div>
-    <el-dropdown
-      class="avatar-container right-menu-item hover-effect"
-      trigger="click"
-      placement="top-start"
-    >
+    <el-dropdown class="avatar-container right-menu-item hover-effect" trigger="click" placement="top-start">
       <div class="avatar-wrapper">
         <img :src="userStore.avatar" class="user-avatar" />
         <el-icon class="icon-caret ver-clr">
@@ -86,7 +82,7 @@ const isShowVerticalStyle = computed(() => {
 
 // 打开页面设置抽屉
 function openSettingsDrawer() {
-  mittBus.emit('mittOpenSettingDrawer')
+  mittBus.emit('open-setting-drawer')
 }
 
 // 注销
